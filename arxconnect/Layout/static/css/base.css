@@ -1,0 +1,175 @@
+.header{
+    position: fixed;
+    top: 0;
+    left: 200px;
+    width: calc(100% - 200px);
+    height: 60px;
+    display: flex;
+    z-index: 10;
+    align-items: center;
+    padding: 0 20px;
+    transition: 0.3s ease;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.15);
+    transition: 0.3s ease;
+
+}
+
+.body{
+        overflow-y: auto;
+
+}
+
+.sidebar .logout {
+  position: absolute;
+  bottom: 20px; 
+  width: 100%;
+}
+
+/* Mantém o formulário fixo no final da sidebar */
+.sidebar .logout-form {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar .logout-form .nav-link {
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar .logout-form .nav-link:hover {
+  background-color: #377a6c;
+  color: #8dff92;
+}
+
+
+.sidebar {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    padding-top: 20px;
+    width: 200px ;
+    background: #18463c;
+    transition: 0.3s ease;
+    box-shadow: 0px 1px 30px 10px rgba(0, 0, 0, 0.15);
+
+}
+.sidebar .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 20px;
+  color: #fff;
+  background: none;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar .desc:hover{
+    font-weight: 500;
+}
+
+.sidebar .nav-link:hover{
+    background-color: #377a6c;
+}
+
+.sidebar .sub-menu {
+    background-color: #1b352f;
+    padding-left: 5%;
+}
+
+.main-content {
+    margin-left: 200px;
+    margin-top: 60px;
+    padding: 20px;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+    transition: 0.3s ease;
+    
+}
+
+.logo-sidebar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+.btn-bd-primary {
+    color: #18463c;
+}
+
+.sidebar .logout {
+  position: absolute;
+  bottom: 20px; 
+  width: 100%;
+}
+
+
+/* 
+====================================================
+================== Collapse Show ===================
+====================================================
+*/
+
+.header.expanded {
+    left: 80px;
+    width: calc(100% - 80px);
+}
+
+.sidebar.collapsed {
+    width: 80px;
+}
+
+.sidebar .nav-link:focus, 
+.sidebar .nav-link:hover{
+    color:#8dff92
+}
+
+.toggle-btn {
+    color: aqua;
+}
+
+.sidebar.collapsed .desc {
+    display: none;
+}
+
+.sidebar.collapsed .nav-link{
+    justify-content: center;
+    transition: 0.3s;
+}
+
+
+.sidebar.collapsed .toggle-btn {
+    left: 90px;
+
+}
+
+.main-content.expanded {
+    margin-left: 100px;
+    margin-top: 60px;
+    transition: 0.3s ease;
+
+}
+
+
+.sidebar.collapsed .logo-sidebar {
+    transform:scale(0.4);
+    transition: transform 0.3s ease;
+}
+
