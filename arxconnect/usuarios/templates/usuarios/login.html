@@ -3,29 +3,64 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tela de Login</title>
+  <title>Login</title>
   {% load static %}
   <link rel="stylesheet" href="{% static 'usuarios/login.css' %}" >
 </head>
 <body>
   <div class="container">
     <div class="login-box">
-      <h2>Login</h2>
-      <form action="{% url 'login' %}"  method="post">
-        {% csrf_token %}
-        <div class="row">
-            {% for field in form.visible_fields %} 
-            <div>
-                <label for="{{ field.id_for_label }}"></label>
-                {{ field }}
-            </div>
-            {% endfor %}
+              <div>
+            <img src="{% static 'img/logo_arx_colorida.svg' %}" class="logo-login" href="#"  alt="">
         </div>
-        <div>
+
+        <form action="{% url 'login' %}" method="post">
+          {% csrf_token %}
+
+          
+          <div class="row">
+
+              <div class="mb-3">
+                <label for="{{ form.nome_login.id_for_label }}"></label>
+                {{ form.nome_login }}
+              </div>
+
+              <div class="mb-3">
+                <label for="{{ form.senha.id_for_label }}"></label>
+                {{ form.senha }}
+              </div>        
+
+              <div class="mb-3">
+                <label for="{{ form.lembrar_me.id_for_label }}"></label>
+                {{ form.lembrar_me }}
+                <span>
+                  Lembrar-me
+                </span>
+              </div>
+            
+          
+          </div>
+        
+          <div class="div-button">
             <button type="submit">Logar</button>
-        </div>
-      </form>
+          </div>
+        </form>
+
+
     </div>
+      <div class="login-box2">
+        <span>
+          <h1>
+            Bem Vindo!
+          </h1>
+          <p class="login-text" style='line-height: 2';'>
+          Aqui nós temos <br>
+          • DashBoards <br>
+          • Colaboração <br>
+          • Ferramentas <strong>ARX</strong>
+          </p>
+        </span>
+      </div>
   </div>
 </body>
 </html>

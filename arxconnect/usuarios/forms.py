@@ -8,7 +8,7 @@ class LoginForms (forms.Form):
         widget=forms.TextInput(
             attrs={
                 'class': 'login-box',
-                'placeholder' : 'Ex: Patrik.Mateus'
+                'placeholder' : 'Entre com o seu login'
             }
         )        
 
@@ -21,10 +21,17 @@ class LoginForms (forms.Form):
         widget=forms.PasswordInput(
             attrs={
                 'class': 'login-box',               
-                'placeholder' : 'Informe sua senha'
+                'placeholder' : 'Entre com a sua senha'
             }            
         )
     )    
+
+    lembrar_me = forms.BooleanField(
+        label='Lembrar-me', 
+        required=False,
+        widget=forms.CheckboxInput(attrs={'class': 'forms-Chec'})
+    )
+
 class CadastroForms(forms.Form):
 
     nome_cadastro=forms.CharField(

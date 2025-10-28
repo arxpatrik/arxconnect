@@ -16,7 +16,7 @@
 }
 
 .body{
-        overflow-y: auto;
+  overflow-y: auto;
 
 }
 
@@ -27,6 +27,7 @@
 }
 
 /* Mantém o formulário fixo no final da sidebar */
+
 .sidebar .logout-form {
   position: absolute;
   bottom: 20px;
