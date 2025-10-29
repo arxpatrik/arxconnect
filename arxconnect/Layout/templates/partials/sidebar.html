@@ -4,7 +4,7 @@
             <img src="{% static 'img/logo_arx.png' %}" href="#"  alt="">
         </div>
         <nav class="nav flex-column">
-            <a href="#" class="nav-link">
+            <a href="{% url 'home' %}" class="nav-link">
                 <span class="icon">
                     <i class="bi bi-house"></i>
                 </span>
@@ -26,7 +26,7 @@
 
             <!-- Menu Dropdown-->
 
-             <a href="#" class="nav-link" data-bs-toggle='collapse' data-bs-target="#submenu" aria-expanded="false" aria-controls="sub-menu">
+             <a href="#" class="nav-link" data-bs-toggle='collapse' data-bs-target="#submenu" aria-expanded="false" aria-controls="sub-menu" data-bs-auto-close="outside">
                 <span class="icon">
                     <i class="bi bi-window-stack"></i>
                 </span>
@@ -67,7 +67,7 @@
 
              <!---Configuração--->
 
-             <a href="#" class="nav-link" data-bs-toggle='collapse' data-bs-target="#submenu-config" aria-expanded="false" aria-controls="sub-menu">
+             <a href="#" class="nav-link" data-bs-toggle='collapse' data-bs-target="#submenu-config" aria-expanded="false" aria-controls="sub-menu" data-bs-auto-close="outside">
                 <span class="icon">
                     <i class="bi bi-gear"></i>
                 </span>
@@ -79,7 +79,7 @@
             <!-- Submenu Configuração-->
 
             <div class="sub-menu collapse" id="submenu-config">
-                <a href="#" class="nav-link">
+                <a href="{% url 'configs:user_manager' %}" class="nav-link">
                     <span class="icon">
                         <i class="bi bi-person-fill"></i>
                     </span>
