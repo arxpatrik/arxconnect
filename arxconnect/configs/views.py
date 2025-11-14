@@ -8,4 +8,13 @@ def user_manager(request):
     return render(request, "user_manager.html")
 
 def criar_usuario(request):
-    return HttpResponse("Função criar_usuario")
+    if request.method == 'POST':
+        dados = request.POST.dict()
+        r = f"""
+        Método: {request.method}<br>
+        Dados recebidos: <br>
+        {dados}
+        """
+        return HttpResponse(r)
+    else:
+        return HttpResponse('GET')
