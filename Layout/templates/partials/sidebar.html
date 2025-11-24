@@ -1,0 +1,156 @@
+    {% load static %}
+    <div class="sidebar" id="sidebar">
+        <div class="logo-sidebar">
+            <img src="{% static 'img/logo_arx.png' %}" href="#"  alt="">
+        </div>
+        <nav class="nav flex-column">
+            <a href="{% url 'home' %}" class="nav-link">
+                <span class="icon">
+                    <i class="bi bi-house"></i>
+                </span>
+                <span class="desc">Início</span>
+            </a>
+
+            <a href="#" class="nav-link">
+                <span class="icon">
+                    <i class="bi bi-clipboard-check"></i>
+                </span>
+                <span class="desc">Posts</span>
+            </a>
+            <a href="#" class="nav-link">
+                <span class="icon">
+                    <i class="bi bi-bell"></i>
+                </span>
+                <span class="desc">Notificação</span>
+            </a>
+
+            <!-- Menu Dropdown-->
+
+
+
+            <a href="#" class="nav-link" data-bs-toggle='collapse' data-bs-target="#submenu1" aria-expanded="false" aria-controls="sub-menu" data-bs-auto-close="outside">
+                <span class="icon">
+                    <i class="bi bi-window-stack"></i>
+                </span>
+                <span class="desc">Financeiro
+                    <i class="bi bi-chevron-down"></i>
+                </span>
+            </a>
+
+
+             <div class="sub-menu collapse" id="submenu1">
+                <a href="{% url 'pendencias:pendencias' %}" class="nav-link">
+                    <span class="icon">
+                        <i class="bi bi-file-earmark-check"></i>
+                    </span>
+                    <span class="desc">
+                        Pendências
+                    </span>
+                </a>   
+             </div>
+
+
+             <a href="#" class="nav-link" data-bs-toggle='collapse' data-bs-target="#submenu2" aria-expanded="false" aria-controls="sub-menu" data-bs-auto-close="outside">
+                <span class="icon">
+                    <i class="bi bi-window-stack"></i>
+                </span>
+                <span class="desc">Dashboards
+                    <i class="bi bi-chevron-down"></i>
+                </span>
+             </a>
+
+            <!-- Submenu -->
+
+             <div class="sub-menu collapse" id="submenu2">
+                <a href="{% url 'dashboards:power_bi' %}" class="nav-link">
+                    <span class="icon">
+                        <i class="bi bi-file-earmark-check"></i>
+                    </span>
+                    <span class="desc">
+                        Ancore
+                    </span>
+                </a>   
+
+                <a href="#" class="nav-link">
+                    <span class="icon">
+                        <i class="bi bi-file-earmark-check"></i>
+                    </span>
+                    <span class="desc">
+                        Projeto 02
+                    </span>
+                </a>   
+                <a href="#" class="nav-link">
+                    <span class="icon">
+                        <i class="bi bi-file-earmark-check"></i>
+                    </span>
+                    <span class="desc">
+                        Projeto 03
+                    </span>
+                </a>   
+             </div>
+
+             <!---Configuração--->
+
+             <a href="#" class="nav-link" data-bs-toggle='collapse' data-bs-target="#submenu-config" aria-expanded="false" aria-controls="sub-menu" data-bs-auto-close="outside">
+                <span class="icon">
+                    <i class="bi bi-gear"></i>
+                </span>
+                <span class="desc">Configuração
+                    <i class="bi bi-chevron-down"></i>
+                </span>
+             </a>
+
+            <!-- Submenu Configuração-->
+
+            <div class="sub-menu collapse" id="submenu-config">
+                <a href="{% url 'configs:user_manager' %}" class="nav-link">
+                    <span class="icon">
+                        <i class="bi bi-person-fill"></i>
+                    </span>
+                    <span class="desc">
+                        Usuários
+                    </span>
+                </a>
+                
+
+                <a href="#" class="nav-link">
+                    <span class="icon">
+                        <i class="bi bi-people-fill"></i>
+                    </span>
+                    <span class="desc">
+                        Grupos
+                    </span>                
+
+                <a href="#" class="nav-link">
+                    <span class="icon">
+                        <i class="bi bi-gear"></i>
+                    </span>
+                    <span class="desc">
+                        Configurações
+                    </span>
+                </a>                
+            </div>
+
+
+            <a href="#" class="nav-link toggle-btn" id="toggleBtn">
+                    <span class="icon">
+                        <i class="bi bi-list"></i>
+                    </span>
+                <span class="desc">Retirar lateral
+                </span>
+            </a>   
+            
+            <form action="{% url 'logout' %}" method="post" class="nav-link logout-form">
+
+              {% csrf_token %}
+              <button type="submit" class="nav-link logout-btn">
+                <span class="icon">
+                  <i class="bi bi-box-arrow-left"></i>
+                </span>
+                <span class="desc">Sair</span>
+              </button>
+            </form>
+            
+ 
+        </nav>
+        </div>
