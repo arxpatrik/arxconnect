@@ -13,3 +13,7 @@ def SalvaTeste(request):
     pessoas = Pessoa.objects.all()
     pendencias_view(request)
     return render (request, 'pendencias.html', {"pessoas": pessoas })
+
+def editar(request, id):
+    Pessoa = Pessoa.objects.get(id=id)
+    return render (request, "editar.html", {"pessoa": Pessoa})
