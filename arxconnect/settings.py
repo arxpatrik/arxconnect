@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+AUTH_USER_MODEL = 'configs.Usuario'
+
 
 # Application definition
 
@@ -37,12 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'usuarios.apps.UsuariosConfig',
-    'home.apps.HomeConfig',
     'configs.apps.ConfigsConfig',
+    'home.apps.HomeConfig',
     'dashboards.apps.DashboardsConfig',
-    'pendencias.apps.PendenciasConfig'
-]
+    'pendencias.apps.PendenciasConfig',
+]   
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

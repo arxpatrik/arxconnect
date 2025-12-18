@@ -11,11 +11,11 @@
     <li class="list-group-item active">Dados</li>
 {% for pessoa in pessoas %}
 
-  <li class="list-group-item"> {{ pessoa.id }} - {{ pessoa.nome }} <a href="">Editar</a></li>
+  <li class="list-group-item"> {{ pessoa.id }} - {{ pessoa.nome }} <a href="{% url 'pendencias:editar' pessoa.id %}">Editar</a></li>
 {% endfor %}
 </ul>
 
-<form action="{% url 'pendencias:SalvaTeste' %}" method="POST">
+<form action="{% url 'pendencias:Salvar' %}" method="POST">
     {% csrf_token %}
     <div class="input-group">
         <span class="input-group-text">Primeiro e Ultimo nome</span>
