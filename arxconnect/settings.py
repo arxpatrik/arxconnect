@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'home.apps.HomeConfig',
     'dashboards.apps.DashboardsConfig',
     'pendencias.apps.PendenciasConfig',
+    'usuarios.apps.UsuariosConfig',
 ]   
 
 MIDDLEWARE = [
