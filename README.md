@@ -39,7 +39,6 @@ O projeto possui a seguinte estrutura básica (conforme visualizado no repositó
 ├── manage.py          # Script de comandos Django
 ├── requirements.txt   # Dependências Python
 └── .gitignore
-``` :contentReference[oaicite:3]{index=3}
 
 🛠️ Tecnologias Utilizadas
 
