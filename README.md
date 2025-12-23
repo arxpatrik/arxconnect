@@ -79,26 +79,39 @@ Antes de iniciar, verifique se você tem:
 
 
 Crie e ative um ambiente virtual:
-
-python -m venv venv
-source venv/bin/activate      # Linux / macOS
-venv\Scripts\activate         # Windows
-
-
+   ```bash
+   git clone https://github.com/arxpatrik/arxconnect.git
+   ```
+   ```bash
+   cd arxconnect
+   ```
+   ```bash
+   python -m venv venv
+   ```
+# Linux / macOS
+```bash
+source venv/bin/activate
+```
+# Windows
+```bash
+venv\Scripts\activate        
+```
 Instale as dependências:
 
-pip install -r requirements.txt
+```bash
+pip install -r requirements.txt   
+```
 
+Aplique as migrations: (Confira as Settings)
 
-Aplique as migrations:
-
+```bash
 python manage.py migrate
-
+```
 
 Execute o servidor:
-
+```bash
 python manage.py runserver
-
+```
 
 Acesse no navegador:
 
