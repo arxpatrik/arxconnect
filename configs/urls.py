@@ -4,5 +4,5 @@ from . import views
 app_name = "configs"
 
 urlpatterns = [
-        path("usuarios/", views.user_manager, name='user_manager'),
+        path("users/", views.user_manager, name='user_manager'),
     ]

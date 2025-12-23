@@ -4,12 +4,13 @@ from django.contrib.auth.admin import UserAdmin
 
 
 # Register your models here.
-
 @admin.register(Usuario)
+
 class UsuarioAdmin(UserAdmin):
     fieldsets = UserAdmin.fieldsets + (
         ('Cargos', {
-            'fields': ('cargo',),
+            'fields': ('cargo','cpf'),
         }),
     )
     pass
+

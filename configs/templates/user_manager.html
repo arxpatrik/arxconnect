@@ -1,11 +1,12 @@
 {% extends "base.html" %}
+{% load static %}
 {% block title %}ARX - Gerenciar Usuários{% endblock %}
-
 {% block content %}
+
 <h1>Gerenciador de usuários</h1>
 <p>Listagem, criação e edição de usuários do sistema.</p>
 
-<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalNovoUsuario">
+<button class="btn btn-primary btn-novo-usuario" data-bs-toggle="modal" data-bs-target="#modalNovoUsuario">
     <i class="bi bi-person-plus"></i> Novo Usuário
 </button>
 
@@ -59,6 +60,13 @@
                         </div>
                     </div>
 
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label">CPF</label>
+                            <input type="text" name="cpf" class="form-control">
+                        </div>
+                    </div>                    
+
                     <!-- Permissões -->
                     <div class="mb-3">
                         <label class="form-label">Permissões</label><br>
@@ -83,9 +91,7 @@
                             {% endfor %}
                         </select>
                     </div>
-
                 </div>
-
                 <!-- ======== RODAPÉ ======== -->
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
@@ -95,4 +101,41 @@
         </div>
     </div>
 </div>
+
+<div>
+<ul class="list-group mt-3">
+
+    <!-- CABEÇALHO -->
+    <li class="list-group-item active">
+        <div class="row fw-bold">
+            <div class="col-1">ID</div>
+            <div class="col-3">Usuário</div>
+            <div class="col-4">Email</div>
+            <div class="col-2">Cargo</div>
+            <div class="col-2">Ações</div>
+        </div>
+    </li>
+
+    <!-- LINHAS -->
+    {% for usuario in listar %}
+    <li class="list-group-item">
+        <div class="row align-items-center">
+            <div class="col-1">{{ usuario.id }}</div>
+            <div class="col-3">{{ usuario.username }}</div>
+            <div class="col-4">{{ usuario.email }}</div>
+            <div class="col-2">{{ usuario.cargo }}</div>
+            <div class="col-2">
+                <a href="#" class="btn btn-sm btn-outline-primary">Editar</a>
+            </div>
+        </div>
+    </li>
+    {% empty %}
+    <li class="list-group-item text-muted text-center">
+        Nenhum usuário encontrado
+    </li>
+    {% endfor %}
+
+</ul>
+</div>
+
 {% endblock %}

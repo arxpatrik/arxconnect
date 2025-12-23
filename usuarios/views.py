@@ -1,5 +1,4 @@
 from django.shortcuts import render, redirect
-from usuarios.forms import LoginForms, CadastroForms
 from django.conf import settings
 from django.contrib import messages
 from django.contrib import auth
@@ -28,10 +27,6 @@ def login(request):
                 return redirect('home')
             else:
                 messages.warning(request, 'Usuário ou senha inválidos')
-            #    return redirect('login')
             
 
     return render(request, "usuarios/login.html", {'form': form})
-
-def cadastro(request):
-    form = CadastroForms()

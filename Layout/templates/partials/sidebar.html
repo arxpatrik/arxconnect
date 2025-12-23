@@ -1,7 +1,7 @@
     {% load static %}
     <div class="sidebar" id="sidebar">
         <div class="logo-sidebar">
-            <img src="{% static 'img/logo_arx.png' %}" href="#"  alt="">
+            <img src="{% static 'layout/img/logo_arx.png' %}" href="#"  alt="">
         </div>
         <nav class="nav flex-column">
             <a href="{% url 'home' %}" class="nav-link">
@@ -26,8 +26,6 @@
 
             <!-- Menu Dropdown-->
 
-
-
             <a href="#" class="nav-link" data-bs-toggle='collapse' data-bs-target="#submenu1" aria-expanded="false" aria-controls="sub-menu" data-bs-auto-close="outside">
                 <span class="icon">
                     <i class="bi bi-currency-dollar"></i>
@@ -39,7 +37,7 @@
 
 
              <div class="sub-menu collapse" id="submenu1">
-                <a href="{% url 'pendencias:pendencias' %}" class="nav-link">
+                <a href="" class="nav-link">
                     <span class="icon">
                         <i class="bi bi-file-earmark-check"></i>
                     </span>
