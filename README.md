@@ -24,9 +24,13 @@ GitHub
 
 ✔️ Banco de dados SQLite para desenvolvimento rápido
 
+(A lista completa de funcionalidades pode ser estendida conforme o projeto evoluir.) 
+GitHub
+
 🧩 Estrutura de Pastas
 
 O projeto possui a seguinte estrutura básica (conforme visualizado no repositório):
+``` :contentReference[oaicite:3]{index=3}
 
 /
 ├── arxconnect/        # Código principal do projeto Django
@@ -39,8 +43,11 @@ O projeto possui a seguinte estrutura básica (conforme visualizado no repositó
 ├── manage.py          # Script de comandos Django
 ├── requirements.txt   # Dependências Python
 └── .gitignore
+```
 
-🛠️ Tecnologias Utilizadas
+---
+
+## 🛠️ Tecnologias Utilizadas
 
 | Tecnologia | Versão / Descrição |
 |------------|---------------------|
@@ -52,6 +59,7 @@ O projeto possui a seguinte estrutura básica (conforme visualizado no repositó
 
 *(Instale as versões específicas conforme o seu requirements.)* :contentReference[oaicite:4]{index=4}
 
+---
 
 ## 🚀 Começando
 
@@ -64,9 +72,11 @@ Antes de iniciar, verifique se você tem:
 
 ### Instalação
 
-1. Clone o repositório: 
+1. Clone o repositório:
+   ```bash
    git clone https://github.com/arxpatrik/arxconnect.git
    cd arxconnect
+
 
 Crie e ative um ambiente virtual:
 
@@ -93,6 +103,3 @@ python manage.py runserver
 Acesse no navegador:
 
 http://localhost:8000
-
-
-
