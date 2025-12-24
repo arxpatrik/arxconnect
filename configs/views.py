@@ -1,17 +1,30 @@
-from django.shortcuts import render
-from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
-from .models import Usuario
 from django.contrib.auth import get_user_model
-
-# Create your views here.
+from django.shortcuts import render, redirect
+from django.contrib import messages
+from .forms import UsuarioCreateForm
 
 User = get_user_model()
 
 @login_required(login_url='login')
 
 def user_manager(request):
-    usuarios = User.objects.all()
+    if request.method == 'POST':
+        form = UsuarioCreateForm(request.POST)
+        if form.is_valid():
+            print("Form Ok")
+            usuario = form.save(commit=False)
+            usuario.save()
+
+            messages.success(request, 'Usuário criado com sucesso!')
+            return redirect('configs:user_manager')
+    else:
+        form = UsuarioCreateForm()
+        print(form.errors)
+
+    listar = User.objects.all()
+
     return render(request, "user_manager.html", {
-        'listar':usuarios
+        'listar': listar,
+        'form': form,
     })
